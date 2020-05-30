@@ -1,0 +1,29 @@
+major minor  #blocks  name
+
+   1        0      16384 ram0
+   1        1      16384 ram1
+   1        2      16384 ram2
+   1        3      16384 ram3
+   1        4      16384 ram4
+   1        5      16384 ram5
+   1        6      16384 ram6
+   1        7      16384 ram7
+   1        8      16384 ram8
+   1        9      16384 ram9
+   1       10      16384 ram10
+   1       11      16384 ram11
+   1       12      16384 ram12
+   1       13      16384 ram13
+   1       14      16384 ram14
+   1       15      16384 ram15
+ 179        0   30578688 mmcblk0
+ 179        1   30322688 mmcblk0p1
+  31        0       3072 mtdblock0
+  31        1       5120 mtdblock1
+  31        2        128 mtdblock2
+  31        3      10240 mtdblock3
+  31        4      16384 mtdblock4
+  31        5       8192 mtdblock5
+  31        6      65536 mtdblock6
+  31        7      20352 mtdblock7
+  31        8       2048 mtdblock8
