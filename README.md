@@ -75,5 +75,5 @@ dns-nameservers 192.168.1.1
 
 Enable ethernet: `ifup eth0`.
 Check ethernet status: `ethtool eth0`
-Now you can use `ssh root@192.168.1.205:22` to connect the built-in linux.
+Now you can use `ssh root@192.168.1.205` to connect the built-in linux.
 Of course, you can use other IP address according to your network configuration.
