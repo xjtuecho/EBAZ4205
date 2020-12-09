@@ -2,6 +2,8 @@
 
 This development board was the control card of Ebit E9+ BTC miner. In mainland China, it cost about 5 dollars (<35 CNY) on the secondhand market.
 
+[telegram channel](https://t.me/ebaz4205)
+
 ## hardware summary
 
 - [PDF Schematic](HW/EBAZ4205.pdf)
@@ -10,6 +12,7 @@ This development board was the control card of Ebit E9+ BTC miner. In mainland C
 - [Kernel cmdline](proc/cmdline)
 - [NAND Memory Map](proc/mtd)
 - [Linux Version](proc/version)
+
 
 The TF card socket is absent by default, you can buy and solder it by yourself if necessary. So do the UART port `J7`and the JTAG port `J8`.
 ![Top layer of the board](image/01-PCB-TL.jpg)
