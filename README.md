@@ -2,12 +2,12 @@
 
 This development board was the control card of Ebit E9+ BTC miner. In mainland China, it cost about 5 dollars (<35 CNY) on the secondhand market.
 
-[telegram channel](https://t.me/ebaz4205)
+[telegram group](https://t.me/ebaz4205)
 
 ## hardware summary
 
 - [PDF Schematic](HW/EBAZ4205.pdf)
-- [Altium Designer PcbDoc](HW/EBAZ4205.PcbDoc) 
+- [Altium Designer PcbDoc](HW/EBAZ4205.PcbDoc)
 - [CPU info](proc/cpuinfo)
 - [Kernel cmdline](proc/cmdline)
 - [NAND Memory Map](proc/mtd)
