@@ -1,0 +1,20 @@
+(page_layout
+ (setup
+  (textsize 1.500000 1.500000)
+  (textlinewidth 0.150000)
+  (linewidth 0.150000)
+  (left_margin 8.000000)
+  (right_margin 5.000000)
+  (top_margin 5.000000)
+  (bottom_margin 5.000000)
+ )
+ (line
+  (comment "")
+  (linewidth 0.000000)
+  (start 0.000000 0.000000)
+  (end 0.000000 0.000000)
+  (repeat 1)
+  (incrx 0.000000)
+  (incry 0.000000)
+ )
+)
