@@ -2,17 +2,21 @@
 
 This development board was the control card of Ebit E9+ BTC miner. In mainland China, it cost about 5 dollars (<35 CNY) on the secondhand market.
 
-## Resource
+## Resources
 
 - [Telegram group](https://t.me/ebaz4205) general chat, quick Q&A
-- [Wiki](https://github.com/xjtuecho/EBAZ4205/wiki) general chat, quick Q&A
+- [Wiki](https://github.com/xjtuecho/EBAZ4205/wiki) FAQ, tutorials
 - [Github discussions](https://github.com/xjtuecho/EBAZ4205/discussions) troubleshooting help, projects, development
 
-## hardware summary
+## Hardware summary
 
-- [PDF Schematic](HW/EBAZ4205.pdf)
-- [Altium Designer PcbDoc](HW/EBAZ4205.PcbDoc)
+Hardware:
+- [PDF Schematic](/HW/ebaz4205/EBAZ4205-SCH.pdf)
+- [Altium Designer design files](/HW/ebaz4205/altium/)
+- [KiCad design files](/HW/ebaz4205/kicad/)
 - [CPU info](proc/cpuinfo)
+
+On-board linux
 - [Kernel cmdline](proc/cmdline)
 - [NAND Memory Map](proc/mtd)
 - [Linux Version](proc/version)
@@ -21,7 +25,7 @@ This development board was the control card of Ebit E9+ BTC miner. In mainland C
 The TF card socket is absent by default, you can buy and solder it by yourself if necessary. So do the UART port `J7`and the JTAG port `J8`.
 ![Top layer of the board](image/01-PCB-TL.jpg)
 
-on bottom layer of the board, Diode `D24` is absent by default.  In order to power the board via `J3 J4 J5`, you should solder a SMC schottky diode.
+On the bottom layer of the board, diode `D24` is absent by default, which you need if you want to power the board via `J3 J4 J5`. Solder a SMC schottky diode there.
 ![Bottom layer of the board](image/02-PCB-BL.jpg)
 
 XC7Z010CLG400, Dual Core Cortex A9 @ 666.66MHz and Artix-7 FPGA with 28k LEs.
@@ -39,13 +43,13 @@ XC7Z010CLG400, Dual Core Cortex A9 @ 666.66MHz and Artix-7 FPGA with 28k LEs.
 BOOT Select Resistor: `R2577 and R2584`. The resistor is on `R2584` by default, which indicates boot from NAND. If you want to boot from TF card, **move** `R2584` to `R2577`.
 ![BOOT](image/07-BOOT.jpg)
 
-## power the board
+## Powering the board
 
-If the Schottky Diode `D24` was not mounted. You can only power the board by `DATA1` `DATA2` and `DATA3` port. Voltage 5V~12V is OK, 400mA and above is necessary. The pin distance of these three ports is 2.0mm, which is not common as 2.54mm.
+If the Schottky Diode `D24` was not mounted, you can only power the board by `DATA1` `DATA2` and `DATA3` port. Voltage 5V~12V is OK, 400mA and above is necessary. The pin distance of these three ports is 2.0mm, which is not common as 2.54mm.
 
 After `D24` was mounted, we can power the board by J3 J4 J5. For convenience, J3 or J5 is recommended, which was originally for FAN power.
 
-## reset the root password of built-in linux
+## Reset the root password of built-in linux
 
 Use HyperTerminal or Putty to connect the TTL port, TXD RXD and GND is enough, VCC is not necessary. Power the Board, Hit `d` to enter the u-boot shell.
 
@@ -59,7 +63,7 @@ passwd
 
 Use the commands above to reset the root password.
 
-## shut down the BTC miner program
+## Shut down the BTC miner program
 
 After logging on with root, execute commands below to disable the BTC miner program.
 
@@ -68,7 +72,7 @@ mv /etc/rcS.d/S95cgminer.sh /etc/rcS.d/K95cgminer.sh
 reboot
 ```
 
-## set static IP address
+## Set static IP address
 
 Edit configuration file: `/etc/network/interfaces`, add contents below.
 
