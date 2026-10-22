@@ -1,4 +1,4 @@
-## This file is a general .xdc for the EBAZ425
+## This file is a general .xdc for the EBAZ4205
 ## To use it in a project:
 ## - uncomment the lines corresponding to used pins
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
@@ -8,6 +8,20 @@
 
 #set_property -dict { PACKAGE_PIN N18   IOSTANDARD LVCMOS33 } [get_ports { clk }]; # Use if you have X5 Oscillator soldered on
 #create_clock -add -name clk_pin -period 10.00 -waveform {0 5} [get_ports { clk }];
+
+##ENET0
+#set_property -dict { PACKAGE_PIN U14 IOSTANDARD LVCMOS33 } [get_ports { ENET0_GMII_RX_CLK_0 }]
+#set_property -dict { PACKAGE_PIN U15 IOSTANDARD LVCMOS33 } [get_ports { ENET0_GMII_TX_CLK_0 }]
+#set_property -dict { PACKAGE_PIN W19 IOSTANDARD LVCMOS33 } [get_ports { ENET0_GMII_TX_EN_0[0]}]
+#set_property -dict { PACKAGE_PIN W16 IOSTANDARD LVCMOS33 } [get_ports { ENET0_GMII_RX_DV_0 }]
+#set_property -dict { PACKAGE_PIN Y17 IOSTANDARD LVCMOS33 } [get_ports { enet0_gmii_rxd[3] }]
+#set_property -dict { PACKAGE_PIN V17 IOSTANDARD LVCMOS33 } [get_ports { enet0_gmii_rxd[2] }]
+#set_property -dict { PACKAGE_PIN V16 IOSTANDARD LVCMOS33 } [get_ports { enet0_gmii_rxd[1] }]
+#set_property -dict { PACKAGE_PIN Y16 IOSTANDARD LVCMOS33 } [get_ports { enet0_gmii_rxd[0] }]
+#set_property -dict { PACKAGE_PIN Y19 IOSTANDARD LVCMOS33 } [get_ports { enet0_gmii_txd[3] }]
+#set_property -dict { PACKAGE_PIN V18 IOSTANDARD LVCMOS33 } [get_ports { enet0_gmii_txd[2] }]
+#set_property -dict { PACKAGE_PIN Y18 IOSTANDARD LVCMOS33 } [get_ports { enet0_gmii_txd[1] }]
+#set_property -dict { PACKAGE_PIN W18 IOSTANDARD LVCMOS33 } [get_ports { enet0_gmii_txd[0] }]
 
 
 ##DATA1
